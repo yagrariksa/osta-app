@@ -1,21 +1,17 @@
-package com.main.osta_unair.ui.calcu
+package com.main.osta_unair.ui.level
 
 import android.app.Dialog
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.DialogFragment
-import androidx.fragment.app.Fragment
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
-import com.main.osta_unair.databinding.DialogCalcuBinding
-import com.main.osta_unair.databinding.DialogResultCalcuBinding
+import com.main.osta_unair.databinding.DialogLevelBinding
 
-class CalcuBottomSheetDialog(val data1: String, val data2: String, val data3: String) :
-    BottomSheetDialogFragment() {
+class LevelBottomSheetDialog(val item: Level): BottomSheetDialogFragment() {
 
-    private lateinit var newbinding: DialogResultCalcuBinding
     private lateinit var ddialog: Dialog
+    private lateinit var binding: DialogLevelBinding
 
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
         ddialog = super.onCreateDialog(savedInstanceState)
@@ -27,14 +23,17 @@ class CalcuBottomSheetDialog(val data1: String, val data2: String, val data3: St
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        newbinding = DialogResultCalcuBinding.inflate(inflater, container, false)
-        newbinding.modalCloseBtn.setOnClickListener(object : View.OnClickListener {
+        binding = DialogLevelBinding.inflate(inflater, container, false)
+
+        binding.tvDialogTitle.text = item.title
+        binding.tvDialogDesc.text = item.long
+
+        binding.btnCloseDialog.setOnClickListener(object: View.OnClickListener{
             override fun onClick(v: View?) {
                 ddialog.dismiss()
             }
-
         })
-        return newbinding.root
+        return binding.root
     }
 
 
