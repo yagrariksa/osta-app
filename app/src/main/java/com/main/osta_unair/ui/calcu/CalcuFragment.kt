@@ -1,29 +1,16 @@
 package com.main.osta_unair.ui.calcu
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.main.osta_unair.databinding.FragmentCalcuBinding
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [CalcuFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class CalcuFragment(val showBottomDialog: (String, String, String) -> Unit) : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
 
-
-    private lateinit var calcuBinding: FragmentCalcuBinding
+    private lateinit var binding: FragmentCalcuBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,21 +20,52 @@ class CalcuFragment(val showBottomDialog: (String, String, String) -> Unit) : Fr
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        calcuBinding = FragmentCalcuBinding.inflate(inflater, container, false)
-        return calcuBinding.root
+        binding = FragmentCalcuBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        calcuBinding.btnCalcu.setOnClickListener {
-            val data1 = calcuBinding.inputUsia.text.toString()
-            val data2 = calcuBinding.inputBerat.text.toString()
-            val data3 = calcuBinding.inputTinggi.text.toString()
-            showBottomDialog(data1,data2,data3)
+        binding.btnCalcu.setOnClickListener {
+            if (validateData()) {
+                val usia = binding.inputUsia.text.toString()
+                val berat = binding.inputBerat.text.toString()
+                val tinggi = binding.inputTinggi.text.toString()
+
+                Log.d("CALCULATE","data1: ${usia}, data2: ${berat}, data3: ${tinggi}")
+                showBottomDialog(usia, berat, tinggi)
+            }
+
+        }
+    }
+
+    fun validateData(): Boolean {
+        var returnal = true
+
+        binding.tvErrorUsia.visibility = View.GONE
+        binding.tvErrorBerat.visibility = View.GONE
+        binding.tvErrorTinggi.visibility = View.GONE
+
+        if (binding.inputUsia.text.toString() == "") {
+            binding.tvErrorUsia.visibility = View.VISIBLE
+            binding.tvErrorUsia.text = "WAJIB DI ISI"
+            returnal = false
         }
 
+        if (binding.inputBerat.text.toString() == "") {
+            binding.tvErrorBerat.visibility = View.VISIBLE
+            binding.tvErrorUsia.text = "WAJIB DI ISI"
+            returnal = false
+        }
+
+        if (binding.inputTinggi.text.toString() == "") {
+            binding.tvErrorTinggi.visibility = View.VISIBLE
+            binding.tvErrorUsia.text = "WAJIB DI ISI"
+            returnal = false
+        }
+
+        return returnal
     }
 
 }

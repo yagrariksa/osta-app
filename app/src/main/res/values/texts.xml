@@ -1,0 +1,47 @@
+<resources>
+
+    <style name="regular">
+        <item name="android:fontFamily">@font/notosans_regular</item>
+    </style>
+
+    <style name="regular.italic">
+        <item name="android:fontFamily">@font/notosans_italic</item>
+    </style>
+
+    <style name="bold">
+        <item name="android:fontFamily">@font/notosans_bold</item>
+    </style>
+
+    <style name="bold.italic">
+        <item name="android:fontFamily">@font/notosans_bolditalic</item>
+    </style>
+
+    <style name="paragraph" parent="regular">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="title" parent="bold">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="title.big" parent="bold">
+        <item name="android:textSize">22sp</item>
+    </style>
+
+    <style name="subtitle" parent="bold">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="label" parent="regular">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="error" parent="paragraph">
+        <item name="android:textColor">@color/text_red</item>
+        <item name="android:textStyle">italic</item>
+    </style>
+
+    <style name="more" parent="paragraph">
+        <item name="android:textColor">@color/blue_700</item>
+    </style>
+</resources>

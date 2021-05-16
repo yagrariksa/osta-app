@@ -12,19 +12,18 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="22dp"
         android:layout_marginEnd="22dp"
-        android:background="@color/my_transparent"
+        android:background="@drawable/shape_dialog_toolbar_button"
         android:src="@drawable/ic_baseline_close"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/dialog_title_result"
+        style="@style/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="104dp"
         android:text="SELAMAT"
-        android:textSize="22sp"
-        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -32,12 +31,11 @@
 
     <TextView
         android:id="@+id/dialog_subtitle_result"
+        style="@style/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="Low Risk Osteoporosis"
-        android:textSize="22sp"
-        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/dialog_title_result" />
@@ -59,39 +57,38 @@
             android:orientation="vertical">
 
             <TextView
+                style="@style/subtitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="PENJELASAN"
-                android:textSize="14sp"
-                android:textStyle="bold" />
+                android:text="PENJELASAN" />
 
             <TextView
+                style="@style/paragraph"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:text="@string/long_lorem" />
 
             <TextView
+                style="@style/subtitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:text="SARAN"
-                android:textSize="14sp"
-                android:textStyle="bold" />
+                android:text="SARAN" />
 
             <TextView
+                style="@style/paragraph"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:text="@string/long_lorem" />
 
             <TextView
+                style="@style/subtitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:text="DATA USER"
-                android:textSize="14sp"
-                android:textStyle="bold" />
+                android:text="DATA USER" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -107,12 +104,14 @@
 
                     <TextView
                         android:id="@+id/tv_result_usia_label"
+                        style="@style/paragraph"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Usia" />
 
                     <TextView
                         android:id="@+id/tv_result_berat_label"
+                        style="@style/paragraph"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
@@ -120,6 +119,7 @@
 
                     <TextView
                         android:id="@+id/tv_result_tinggi_label"
+                        style="@style/paragraph"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
@@ -134,17 +134,20 @@
                     android:orientation="vertical">
 
                     <TextView
+                        style="@style/paragraph"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text=":" />
 
                     <TextView
+                        style="@style/paragraph"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
                         android:text=":" />
 
                     <TextView
+                        style="@style/paragraph"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
@@ -159,12 +162,14 @@
 
                     <TextView
                         android:id="@+id/tv_result_usia"
+                        style="@style/paragraph"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="12 Tahun" />
 
                     <TextView
                         android:id="@+id/tv_result_berat"
+                        style="@style/paragraph"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
@@ -172,6 +177,7 @@
 
                     <TextView
                         android:id="@+id/tv_result_tinggi"
+                        style="@style/paragraph"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
@@ -181,6 +187,12 @@
 
             </LinearLayout>
 
+            <Button
+                android:id="@+id/btn_read_more"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="32dp"
+                android:text="pelajari lebih lanjut" />
         </LinearLayout>
 
 

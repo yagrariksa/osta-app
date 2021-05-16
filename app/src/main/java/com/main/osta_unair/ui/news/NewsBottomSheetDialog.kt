@@ -1,4 +1,4 @@
-package com.main.osta_unair.ui.level
+package com.main.osta_unair.ui.news
 
 import android.app.Dialog
 import android.os.Bundle
@@ -9,12 +9,12 @@ import android.view.WindowManager
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
-import com.main.osta_unair.databinding.DialogLevelBinding
+import com.main.osta_unair.databinding.DialogNewsBinding
 
-class LevelBottomSheetDialog(val item: Level): BottomSheetDialogFragment() {
+class NewsBottomSheetDialog(val item: News) : BottomSheetDialogFragment() {
 
+    private lateinit var binding: DialogNewsBinding
     private lateinit var ddialog: Dialog
-    private lateinit var binding: DialogLevelBinding
 
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
         ddialog = super.onCreateDialog(savedInstanceState)
@@ -45,18 +45,17 @@ class LevelBottomSheetDialog(val item: Level): BottomSheetDialogFragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = DialogLevelBinding.inflate(inflater, container, false)
+        binding = DialogNewsBinding.inflate(inflater, container, false)
+
+        // TODO :: Buat Glide untuk load item.img
 
         binding.tvDialogTitle.text = item.title
         binding.tvDialogDesc.text = item.long
 
-        binding.btnCloseDialog.setOnClickListener(object: View.OnClickListener{
-            override fun onClick(v: View?) {
-                ddialog.dismiss()
-            }
-        })
+        binding.btnCloseDialog.setOnClickListener {
+            ddialog.dismiss()
+        }
+
         return binding.root
     }
-
-
 }

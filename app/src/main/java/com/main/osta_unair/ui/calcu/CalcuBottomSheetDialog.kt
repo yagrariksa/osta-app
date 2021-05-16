@@ -8,10 +8,11 @@ import android.view.ViewGroup
 import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.Fragment
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
+import com.main.osta_unair.R
 import com.main.osta_unair.databinding.DialogCalcuBinding
 import com.main.osta_unair.databinding.DialogResultCalcuBinding
 
-class CalcuBottomSheetDialog(val data1: String, val data2: String, val data3: String) :
+class CalcuBottomSheetDialog(val usia: String, val berat: String, val tinggi: String, private val readmore: () -> Unit) :
     BottomSheetDialogFragment() {
 
     private lateinit var newbinding: DialogResultCalcuBinding
@@ -28,12 +29,23 @@ class CalcuBottomSheetDialog(val data1: String, val data2: String, val data3: St
         savedInstanceState: Bundle?
     ): View? {
         newbinding = DialogResultCalcuBinding.inflate(inflater, container, false)
+
+        newbinding.root.setBackgroundColor(resources.getColor(R.color.result_green))
+
+        newbinding.tvResultUsia.text = usia + " tahun"
+        newbinding.tvResultBerat.text = berat + " kg"
+        newbinding.tvResultTinggi.text = tinggi + " cm"
+
         newbinding.modalCloseBtn.setOnClickListener(object : View.OnClickListener {
             override fun onClick(v: View?) {
                 ddialog.dismiss()
             }
-
         })
+
+        newbinding.btnReadMore.setOnClickListener {
+            ddialog.dismiss()
+            readmore()
+        }
         return newbinding.root
     }
 

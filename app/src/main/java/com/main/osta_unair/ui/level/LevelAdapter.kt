@@ -21,19 +21,19 @@ class LevelAdapter(private val context: Context, val showBottomDialog: (Level) -
             "Low",
             "Short Description",
             "Long Description is this amazing cool sentences",
-            ContextCompat.getColor(context, R.color.blue_200)
+            ContextCompat.getColor(context, R.color.result_green)
         ),
         Level(
             "Medium",
             "Short Medium Description",
             "Long Medium Description terlalu beresiko untuk anda",
-            ContextCompat.getColor(context, R.color.blue_500)
+            ContextCompat.getColor(context, R.color.result_yellow)
         ),
         Level(
             "DANGER",
             "Short DANGERR Description",
             "Long DANGER DEscription pali b berhabata asjdka asd ",
-            ContextCompat.getColor(context, R.color.blue_200)
+            ContextCompat.getColor(context, R.color.result_red)
         )
     )
 
@@ -46,7 +46,6 @@ class LevelAdapter(private val context: Context, val showBottomDialog: (Level) -
             binding.cardShort.text = item.short
             binding.rootLinearLayout.setOnClickListener {
                 showBottomDialog(item)
-                Log.d("LEVEL_ADAPTER","CLCIK item ${item.title}")
             }
         }
 
