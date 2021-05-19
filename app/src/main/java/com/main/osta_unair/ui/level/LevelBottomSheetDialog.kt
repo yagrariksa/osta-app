@@ -48,7 +48,7 @@ class LevelBottomSheetDialog(val item: Level): BottomSheetDialogFragment() {
         binding = DialogLevelBinding.inflate(inflater, container, false)
 
         binding.tvDialogTitle.text = item.title
-        binding.tvDialogDesc.text = item.long
+        binding.tvDialogDesc.text = resources.getString(item.long)
 
         binding.btnCloseDialog.setOnClickListener(object: View.OnClickListener{
             override fun onClick(v: View?) {

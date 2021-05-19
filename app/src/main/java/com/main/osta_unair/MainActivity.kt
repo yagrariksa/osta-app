@@ -1,11 +1,14 @@
 package com.main.osta_unair
 
+import android.app.DatePickerDialog
 import android.os.Bundle
 import android.view.MenuItem
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager.widget.ViewPager
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.main.osta_unair.databinding.ActivityMainBinding
+import com.main.osta_unair.databinding.FragmentCalcuBinding
 import com.main.osta_unair.ui.calcu.CalcuBottomSheetDialog
 import com.main.osta_unair.ui.calcu.CalcuFragment
 import com.main.osta_unair.ui.level.Level
@@ -14,6 +17,7 @@ import com.main.osta_unair.ui.level.LevelFragment
 import com.main.osta_unair.ui.news.News
 import com.main.osta_unair.ui.news.NewsBottomSheetDialog
 import com.main.osta_unair.ui.news.NewsFragment
+import java.util.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -22,7 +26,7 @@ class MainActivity : AppCompatActivity() {
 
 
     private val pages = listOf(
-        CalcuFragment { data1, data2, data3 -> calcuBottomDialog(data1, data2, data3) },
+        CalcuFragment(this) { data1, data2, data3, data4, data5 -> calcuBottomDialog(data1, data2, data3, data4, data5) },
         LevelFragment(this) { item -> levelBottomDialog(item) },
         NewsFragment(this) { news -> newsBottomDialog(news) }
     )
@@ -98,8 +102,8 @@ class MainActivity : AppCompatActivity() {
         viewPager.currentItem = 1
     }
 
-    private fun calcuBottomDialog(usia: String, berat: String, tinggi: String) {
-        val dd = CalcuBottomSheetDialog(usia, berat, tinggi) {  -> readMore()}
+    private fun calcuBottomDialog(usia: String, berat: String, tinggi: String, kelamin: String, level: Level) {
+        val dd = CalcuBottomSheetDialog(usia, berat, tinggi, kelamin, level) {  -> readMore()}
         dd.show(supportFragmentManager, "CALCU_BOTTOM_DIALOG")
     }
 
@@ -112,6 +116,7 @@ class MainActivity : AppCompatActivity() {
         val dd = NewsBottomSheetDialog(item)
         dd.show(supportFragmentManager, "NEWS_BOTTOM_DIALOG")
     }
+
 }
 
 

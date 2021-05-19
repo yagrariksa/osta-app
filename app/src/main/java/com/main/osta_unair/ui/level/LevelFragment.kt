@@ -21,7 +21,7 @@ class LevelFragment(private val ctx: Context, val showDialog: (Level) -> Unit) :
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val adapter = LevelAdapter(ctx) { level -> showDialog(level) }
+        val adapter = LevelAdapter(ctx, resources) { level -> showDialog(level) }
 
         levelBinding = FragmentLevelBinding.inflate(inflater, container, false)
         levelBinding.rvLevel.layoutManager = LinearLayoutManager(ctx)

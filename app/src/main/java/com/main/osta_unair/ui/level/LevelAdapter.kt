@@ -11,39 +11,23 @@ import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.main.osta_unair.MainActivity
 import com.main.osta_unair.R
+import com.main.osta_unair.Risiko
 import com.main.osta_unair.databinding.ComponentCardLevelBinding
 
-class LevelAdapter(private val context: Context, val showBottomDialog: (Level) -> Unit) :
+class LevelAdapter(private val context: Context, val resources: Resources, val showBottomDialog: (Level) -> Unit) :
     RecyclerView.Adapter<LevelAdapter.ViewHolder>() {
 
-    private val listLevel: List<Level> = listOf(
-        Level(
-            "Low",
-            "Short Description",
-            "Long Description is this amazing cool sentences",
-            ContextCompat.getColor(context, R.color.result_green)
-        ),
-        Level(
-            "Medium",
-            "Short Medium Description",
-            "Long Medium Description terlalu beresiko untuk anda",
-            ContextCompat.getColor(context, R.color.result_yellow)
-        ),
-        Level(
-            "DANGER",
-            "Short DANGERR Description",
-            "Long DANGER DEscription pali b berhabata asjdka asd ",
-            ContextCompat.getColor(context, R.color.result_red)
-        )
-    )
+    val r = Risiko()
+    private val listLevel: List<Level> = r.listLevel
 
+    @Suppress("DEPRECATION")
     inner class ViewHolder(private val binding: ComponentCardLevelBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
         fun bind(item: Level) {
-            binding.rootLinearLayout.setBackgroundColor(item.color)
+            binding.rootLinearLayout.setBackgroundColor(resources.getColor(item.color))
             binding.cardTitle.text = item.title
-            binding.cardShort.text = item.short
+            binding.cardShort.text = resources.getString(item.short)
             binding.rootLinearLayout.setOnClickListener {
                 showBottomDialog(item)
             }

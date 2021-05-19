@@ -4,8 +4,10 @@ import android.content.res.Resources
 import android.graphics.Color
 
 data class Level(
-    val title: String?,
-    val short: String?,
-    val long: String?,
+    val title: String,
+    val short: Int,
+    val long: Int,
     val color: Int,
+    val expl: Int,
+    val saran: Int,
 )

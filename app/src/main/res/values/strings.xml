@@ -19,4 +19,76 @@
         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
     </string>
 
+    <string-array name="month">
+        <item>Jan</item>
+        <item>Feb</item>
+        <item>Mar</item>
+        <item>Apr</item>
+        <item>Mei</item>
+        <item>Jun</item>
+        <item>Jul</item>
+        <item>Aug</item>
+        <item>Sept</item>
+        <item>Okt</item>
+        <item>Nov</item>
+        <item>Des</item>
+    </string-array>
+
+    <string name="rendah_long">
+        Anda berada pada risiko rendah, artinya tulang Anda dalam keadaaan padat dan berkualitas.
+        Risiko mengalami osteoporosis hanya 3%. Terus lakukakn gaya hidup sehat,
+        seperti selalu mengonsumsi makanan kaya kalsium dan lakukan olahraga untuk melatih kekuatan otot dan tulang secara teratur.
+        Jangan lupa, hitung risiko osteoporosis tulangmu secara berkala ya!
+    </string>
+    <string name="rendah_short">
+        Anda berada pada risiko rendah, artinya tulang Anda dalam keadaaan padat dan berkualitas
+    </string>
+    <string name="rendah_expl">
+        Anda berada pada risiko rendah, artinya tulang Anda dalam keadaaan padat dan berkualitas.
+        Risiko mengalami osteoporosis hanya 3%.
+    </string>
+    <string name="rendah_saran">
+        Terus lakukakn gaya hidup sehat,
+        seperti selalu mengonsumsi makanan kaya kalsium dan lakukan olahraga untuk melatih kekuatan otot dan tulang secara teratur.
+        Jangan lupa, hitung risiko osteoporosis tulangmu secara berkala ya!
+    </string>
+
+    <string name="sedang_long">
+        Anda berada pada risiko sedang, artinya Anda masih dalam kategori hati-hati.
+        Risiko mengalami osteoporosis sebesar 15%.
+        Selalu konsumsi makanan kaya kalsium dan lakukan olahraga untuk melatih kekuatan otot dan tulang secara teratur.
+        Jangan lupa, hitung risiko osteoporosis tulangmu secara berkala ya!
+    </string>
+    <string name="sedang_short">
+        Anda berada pada risiko sedang, artinya Anda masih dalam kategori hati-hati.
+    </string>
+    <string name="sedang_expl">
+        Anda berada pada risiko sedang, artinya Anda masih dalam kategori hati-hati.
+        Risiko mengalami osteoporosis sebesar 15%.
+    </string>
+    <string name="sedang_saran">
+        Selalu konsumsi makanan kaya kalsium dan lakukan olahraga untuk melatih kekuatan otot dan tulang secara teratur.
+        Jangan lupa, hitung risiko osteoporosis tulangmu secara berkala ya!
+    </string>
+
+    <string name="tinggi_long">
+        Anda berisiko tinggi mengalami osteoporosis.
+        Risiko mengalami osteoporosis sebesar 61%.
+        Segera konsultasi ke dokter untuk melakukan BMD Test dan konsumsi suplemen tambahan untuk membantu memperbaiki struktur tulang.
+        Konsumsi makanan kaya kalsium dan lakukan olahraga untuk melatih kekuatan otot dan tulang secara teratur.
+        Jangan lupa, hitung risiko osteoporosis tulangmu secara berkala ya!
+    </string>
+    <string name="tinggi_short">
+        Anda berisiko tinggi mengalami osteoporosis.
+        Risiko mengalami osteoporosis sebesar 61%.
+    </string>
+    <string name="tinggi_expl">
+        Anda berisiko tinggi mengalami osteoporosis.
+        Risiko mengalami osteoporosis sebesar 61%.
+    </string>
+    <string name="tinggi_saran">
+        egera konsultasi ke dokter untuk melakukan BMD Test dan konsumsi suplemen tambahan untuk membantu memperbaiki struktur tulang.
+        Konsumsi makanan kaya kalsium dan lakukan olahraga untuk melatih kekuatan otot dan tulang secara teratur.
+        Jangan lupa, hitung risiko osteoporosis tulangmu secara berkala ya!
+    </string>
 </resources>
