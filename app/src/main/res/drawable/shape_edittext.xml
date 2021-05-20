@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<shape xmlns:android="http://schemas.android.com/apk/res/android"
-    android:shape="rectangle">
-
-    <solid android:color="@color/blue_200" />
-    <corners android:radius="8dp" />
-
-</shape>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_focused="true" android:state_pressed="false" android:drawable="@drawable/shape_edittext_normal" />
+    <item android:state_focused="true" android:state_pressed="true" android:drawable="@drawable/shape_edittext_focus" />
+    <item android:state_focused="false" android:state_pressed="true" android:drawable="@drawable/shape_edittext_focus" />
+    <item android:drawable="@drawable/shape_edittext_normal" />
+</selector>

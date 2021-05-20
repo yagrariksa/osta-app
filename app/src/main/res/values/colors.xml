@@ -13,13 +13,14 @@
     <color name="blue_200">#FF90CAF9</color>
 
     <color name="my_transparent">#00FFFFFF</color>
+    <color name="light_grey">#F3F3F3</color>
 
     <color name="text_grey">#FF605D5D</color>
     <color name="text_black">#FF0F0F0F</color>
     <color name="text_white">#FFF0F0F0</color>
-    <color name="text_red">#FFC62828</color>
+    <color name="text_red">#BEFF4646</color>
 
-    <color name="result_green">#85FF69</color>
-    <color name="result_yellow">#FFE851</color>
-    <color name="result_red">#FF6868</color>
+    <color name="result_green">#17c3b2</color>
+    <color name="result_yellow">#ffcb77</color>
+    <color name="result_red">#fe6d73</color>
 </resources>

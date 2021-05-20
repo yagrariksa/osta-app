@@ -10,6 +10,7 @@ import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.main.osta_unair.databinding.DialogLevelBinding
+import com.main.osta_unair.model.Level
 
 class LevelBottomSheetDialog(val item: Level): BottomSheetDialogFragment() {
 

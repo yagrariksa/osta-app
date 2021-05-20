@@ -1,23 +1,20 @@
 package com.main.osta_unair
 
-import android.app.DatePickerDialog
 import android.os.Bundle
 import android.view.MenuItem
-import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager.widget.ViewPager
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.main.osta_unair.databinding.ActivityMainBinding
-import com.main.osta_unair.databinding.FragmentCalcuBinding
 import com.main.osta_unair.ui.calcu.CalcuBottomSheetDialog
 import com.main.osta_unair.ui.calcu.CalcuFragment
-import com.main.osta_unair.ui.level.Level
+import com.main.osta_unair.model.Level
+import com.main.osta_unair.model.Tips
 import com.main.osta_unair.ui.level.LevelBottomSheetDialog
 import com.main.osta_unair.ui.level.LevelFragment
 import com.main.osta_unair.ui.news.News
 import com.main.osta_unair.ui.news.NewsBottomSheetDialog
 import com.main.osta_unair.ui.news.NewsFragment
-import java.util.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -112,8 +109,8 @@ class MainActivity : AppCompatActivity() {
         dd.show(supportFragmentManager, "LEVEL_BOTTOM_DIALOG")
     }
 
-    private fun newsBottomDialog(item: News) {
-        val dd = NewsBottomSheetDialog(item)
+    private fun newsBottomDialog(item: Tips) {
+        val dd = NewsBottomSheetDialog(item, resources)
         dd.show(supportFragmentManager, "NEWS_BOTTOM_DIALOG")
     }
 

@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.main.osta_unair.databinding.FragmentLevelBinding
+import com.main.osta_unair.model.Level
 
 class LevelFragment(private val ctx: Context, val showDialog: (Level) -> Unit) : Fragment() {
 

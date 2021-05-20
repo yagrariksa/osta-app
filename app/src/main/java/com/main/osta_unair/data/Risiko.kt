@@ -1,7 +1,7 @@
-package com.main.osta_unair
+package com.main.osta_unair.data
 
-import androidx.core.content.ContextCompat
-import com.main.osta_unair.ui.level.Level
+import com.main.osta_unair.R
+import com.main.osta_unair.model.Level
 
 class Risiko {
     val rendah: Level = Level(

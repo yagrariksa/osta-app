@@ -16,15 +16,16 @@
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:layout_marginTop="8dp"
-        android:background="@color/blue_200" />
+        android:background="@color/blue_200"
+        android:visibility="gone" />
 
     <TextView
         android:id="@+id/tv_dialog_title"
-        style="@style/title"
+        style="@style/title.big"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="8dp"
+        android:layout_marginVertical="16dp"
         android:text="TITLE" />
 
     <ScrollView
@@ -37,6 +38,8 @@
             style="@style/paragraph"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:justificationMode="inter_word"
+            android:paddingRight="8dp"
             android:text="@string/long_lorem" />
 
     </ScrollView>

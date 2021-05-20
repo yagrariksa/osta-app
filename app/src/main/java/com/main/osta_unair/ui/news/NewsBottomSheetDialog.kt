@@ -1,6 +1,7 @@
 package com.main.osta_unair.ui.news
 
 import android.app.Dialog
+import android.content.res.Resources
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -9,10 +10,13 @@ import android.view.WindowManager
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
+import com.main.osta_unair.data.News
 import com.main.osta_unair.databinding.DialogNewsBinding
+import com.main.osta_unair.model.Tips
 
-class NewsBottomSheetDialog(val item: News) : BottomSheetDialogFragment() {
+class NewsBottomSheetDialog(val item: Tips, val res: Resources) : BottomSheetDialogFragment() {
 
+    private val n: News = News()
     private lateinit var binding: DialogNewsBinding
     private lateinit var ddialog: Dialog
 
@@ -49,8 +53,8 @@ class NewsBottomSheetDialog(val item: News) : BottomSheetDialogFragment() {
 
         // TODO :: Buat Glide untuk load item.img
 
-        binding.tvDialogTitle.text = item.title
-        binding.tvDialogDesc.text = item.long
+        binding.tvDialogTitle.text = res.getString(item.title)
+        binding.tvDialogDesc.text = n.fetchText(res, item.paragraph)
 
         binding.btnCloseDialog.setOnClickListener {
             ddialog.dismiss()

@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:padding="24dp">
 
     <ImageButton
         android:id="@+id/btn_close_dialog"
@@ -13,8 +13,9 @@
         android:src="@drawable/ic_baseline_back" />
 
     <TextView
+        android:layout_marginVertical="16dp"
         android:id="@+id/tv_dialog_title"
-        style="@style/title"
+        style="@style/title.big"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -24,7 +25,9 @@
     <TextView
         android:id="@+id/tv_dialog_desc"
         style="@style/paragraph"
-        android:layout_width="wrap_content"
+        android:textAlignment="textStart"
+        android:justificationMode="inter_word"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="@string/long_lorem" />

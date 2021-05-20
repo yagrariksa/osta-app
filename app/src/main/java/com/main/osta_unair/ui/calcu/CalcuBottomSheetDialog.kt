@@ -6,16 +6,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.WindowManager
-import androidx.fragment.app.DialogFragment
-import androidx.fragment.app.Fragment
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
-import com.main.osta_unair.R
-import com.main.osta_unair.Risiko
-import com.main.osta_unair.databinding.DialogCalcuBinding
 import com.main.osta_unair.databinding.DialogResultCalcuBinding
-import com.main.osta_unair.ui.level.Level
+import com.main.osta_unair.model.Level
 
 class CalcuBottomSheetDialog(val usia: String, val berat: String, val tinggi: String, val kelamin: String, val level: Level, private val readmore: () -> Unit) :
     BottomSheetDialogFragment() {

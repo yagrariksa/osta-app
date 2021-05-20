@@ -1,6 +1,5 @@
 package com.main.osta_unair.ui.calcu
 
-import android.app.DatePickerDialog
 import android.content.Context
 import android.os.Bundle
 import android.util.Log
@@ -9,12 +8,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
-import com.google.android.material.datepicker.MaterialDatePicker
 import com.main.osta_unair.R
-import com.main.osta_unair.Risiko
+import com.main.osta_unair.data.Risiko
 import com.main.osta_unair.databinding.FragmentCalcuBinding
-import com.main.osta_unair.ui.level.Level
-import java.text.SimpleDateFormat
+import com.main.osta_unair.model.Level
 import java.util.*
 
 class CalcuFragment(
@@ -136,7 +133,7 @@ class CalcuFragment(
                 .isEmpty() || bulan.isEmpty() || binding.inputTahun.text.toString().isEmpty()
         ) {
             binding.tvErrorUsia.visibility = View.VISIBLE
-            binding.tvErrorUsia.text = "WAJIB DI ISI"
+            binding.tvErrorUsia.text = "Wajib di isi"
             returnal = false
         }
 
@@ -162,20 +159,20 @@ class CalcuFragment(
 
         if (binding.inputBerat.text.toString() == "") {
             binding.tvErrorBerat.visibility = View.VISIBLE
-            binding.tvErrorBerat.text = "WAJIB DI ISI"
+            binding.tvErrorBerat.text = "Wajib di isi"
             returnal = false
         }
 
         if (binding.inputTinggi.text.toString() == "") {
             binding.tvErrorTinggi.visibility = View.VISIBLE
-            binding.tvErrorTinggi.text = "WAJIB DI ISI"
+            binding.tvErrorTinggi.text = "Wajib di isi"
             returnal = false
         }
 
         val idradio = binding.rgKelamin.checkedRadioButtonId
         if (idradio == -1) {
             binding.tvErrorKelamin.visibility = View.VISIBLE
-            binding.tvErrorKelamin.text = "WAJIB DI ISI"
+            binding.tvErrorKelamin.text = "Wajib di isi"
             returnal = false
         }
 

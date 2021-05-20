@@ -7,11 +7,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.main.osta_unair.R
 import com.main.osta_unair.databinding.FragmentNewsBinding
+import com.main.osta_unair.model.Tips
 
 
-class NewsFragment(private val ctx: Context, val showDialog: (News) -> Unit) : Fragment() {
+class NewsFragment(private val ctx: Context, val showDialog: (Tips) -> Unit) : Fragment() {
 
     private lateinit var binding: FragmentNewsBinding
 
@@ -25,7 +25,7 @@ class NewsFragment(private val ctx: Context, val showDialog: (News) -> Unit) : F
     ): View? {
         binding = FragmentNewsBinding.inflate(inflater, container, false)
 
-        val adapter = NewsAdapter(ctx) { news -> showDialog(news) }
+        val adapter = NewsAdapter(ctx, resources) { tips -> showDialog(tips) }
 
         binding.rvNews.layoutManager = LinearLayoutManager(ctx)
         binding.rvNews.adapter = adapter

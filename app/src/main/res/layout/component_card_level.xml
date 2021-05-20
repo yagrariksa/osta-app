@@ -4,10 +4,10 @@
     android:id="@+id/root_linear_layout"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginBottom="16dp"
+    android:layout_marginBottom="18dp"
     android:background="@drawable/shape_card_level"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:padding="24dp">
 
     <TextView
         android:id="@+id/card_title"
@@ -15,6 +15,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TITLE" />
+
 
     <TextView
         android:id="@+id/card_short"

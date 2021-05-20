@@ -1,7 +1,4 @@
-package com.main.osta_unair.ui.level
-
-import android.content.res.Resources
-import android.graphics.Color
+package com.main.osta_unair.model
 
 data class Level(
     val title: String,

@@ -7,6 +7,7 @@
     <string name="menu_item_calcu">Calculator</string>
     <string name="menu_item_level">Level</string>
     <string name="menu_item_news">Tips</string>
+    <string name="fragment_title_calcu">Calculator Osteoporosis</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
@@ -91,4 +92,56 @@
         Konsumsi makanan kaya kalsium dan lakukan olahraga untuk melatih kekuatan otot dan tulang secara teratur.
         Jangan lupa, hitung risiko osteoporosis tulangmu secara berkala ya!
     </string>
+
+    <string name="tips_1_title">
+        Osteoporosis = “silent epidemic”?? Hmmm... Kenapa ya...
+    </string>
+
+    <string name="tips_2_title">
+        Gimana sih cara menjaga kepadatan dan kualitas tulang kita?
+    </string>
+
+    <string name="tips_3_title">
+        Berjemur bisa memperkuat tulang kita? Kok Bisa?
+    </string>
+
+    <string-array name="tips_1">
+        <item>
+            Osteoporosis atau “tulang keropos” adalah kondisi dimana kepadatan dan kualitas tulang berkurang dan tidak kokoh lagi.
+            Kondisi ini menyebabkan tulang menjadi mudah rapuh ketika mengalami benturan kecil.
+            Tulang normal berstruktur padat dan berongga halus, sedangkan tulang dinilai keropos jika rongga-rongga tersebut membesar dan terlihat jelas.
+            Osteoporosis dikelompokkan menjadi osteoporosis primer dan osteoporosis sekunder.
+            Osteoporosis primer dibagi menjadi 2 tipe, yaitu osteoporosis tipe 1 (pasca menopause) terjadi pada wanita setelah berhenti mengalami menstruasi;
+            dan  osteoporosis tipe 2 (senilis) terjadi pada orang tua di atas usia 75 tahun.
+            Sedangkan osteoporosis sekunder adalah pengeroposan tulang yang terjadi akibat penyakit lain atau obat-obatan, seperti kortikosteroid,
+            anti kejang, atau antasida yang dikonsumsi dalam jangka panjang; pasien artritis reumatoid, penyakit autoimun, gangguan tiroid; atau pasien yang berbaring lama karena stroke.
+        </item>
+        <item>
+            Penegakan diagnosis osteoporosis melalui pemeriksaan densitas masa tulang dengan alat densitometri sentral (BMD).
+            Alat ini mengukur kepadatan masa tulang di daerah tulang belakang, panggul dan lengan bawah.
+            Untuk skrining awal dapat menggunakan ultrasound daerah tumit, selanjutnya menggunakan BMD.
+            Khusus untuk pasien terapi osteoporosis dapat menggunakan pemeriksaan penanda tulang di dalam darah guna memantau keberhasilan terapi.
+        </item>
+    </string-array>
+
+    <string-array name="tips_2">
+        <item>
+            Tulang juga butuh asupan lho, seperti makanan sehat yang kaya vitamin D dan kalsium. Berdasarkan Permenkes RI No. 28 Tahun 2019 tentang Angka Kecukupan Gizi Yang Dianjurkan Untuk Masyarakat Indonesia, rekomendasi asupan vitamin D adalah 400-800 IU per hari. Kebutuhan vitamin D lebih tinggi pada mereka di atas usia 65 tahun. Vitamin D dapat diperoleh dari sinar matahari pagi dan sore selama 5 sampai 15 menit sebanyak minimal 3 kali dalam seminggu. Selain itu, vitamin D juga dapat diperoleh dari sumber makanan seperti berbagai jenis ikan laut, jamur, hati ayam, hati sapi, kuning telur, minyak ikan, ikan tuna, ikan salmon, susu, berbagai produk olahan susu, ataupun dari suplemen tambahan.
+        </item>
+        <item>
+            Selanjutnya adalah konsumsi kalsium yang tepat kadarnya. Berdasarkan Permenkes RI No. 28 Tahun 2019 tentang Angka Kecukupan Gizi Yang Dianjurkan Untuk Masyarakat Indonesia, rekomendasi asupan kalsium adalah 1200 mg/hari pada usia remaja (10-18 tahun) dan usia lansia (di atas 50 tahun). Khusus ibu hamil dan menyusui membutuhkan ekstra kalsium 200mg/hari. Sumber kalsium dapat diperoleh dari susu, ikan sardin, ikan teri, tahu, tempe, susu kedelai, kacang-kacangan, sayuran berwarna hijau, susu sapi, berbagai produk olahan susu, ataupun dari suplemen tambahan.
+        </item>
+        <item>
+            Yuk penuhi hak tulang kita dengan cara mengkonsumsi makanan kaya kalsium, vitamin D, dan rajin berjemur setiap pagi dan sore ya...
+        </item>
+    </string-array>
+
+    <string-array name="tips_3">
+        <item>
+            Masyarakat Indonesia sangat beruntung memperoleh sinar matahari paling optimal dibandingkan negara lainnya. Jika di negara bagian selatan bumi, masyarakatnya membutuhkan paparan matahari minimal 8 jam dalam seminggu. Sedangkan masyarakat Indonesia hanya cukup minimal 30 menit dalam seminggu. Hasil riset Menzies Research Institute, Hobart Australia menunjukkan bahwa pengaktifan vitamin D dapat terjadi dengan bantuan sinar matahari pagi sejak terbit hingga jam 09.00 dan sore jam 15.00 hingga terbenam. Lama paparan sekitar 10-15 menit. Pengaktifan vitamin D ini sangat diperlukan untuk pembentukan tulang baru ataupun perkembangan tulang yang terjadi saat usia remaja.
+        </item>
+        <item>
+            Nah, kita juga bisa melakukan olahraga ringan ketika berjemur ya. Seperti lari, jalan cepat, melompat, senam, ataupun bersepeda. Gerakan-gerakan ini juga melatih tulang dan otot kita agar senantiasa seimbang dan kuat. Semakin sering dilatih, semakin optimal pertumbuhan tulang kita.
+        </item>
+    </string-array>
 </resources>

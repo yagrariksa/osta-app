@@ -1,36 +1,26 @@
 package com.main.osta_unair.ui.news
 
 import android.content.Context
+import android.content.res.Resources
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.main.osta_unair.databinding.ComponentCardNewsBinding
+import com.main.osta_unair.model.Tips
+import com.main.osta_unair.data.News as DataNews
 
-class NewsAdapter(private val context: Context, val showBottomDialog: (News) -> Unit) :
+class NewsAdapter(private val context: Context, private val res: Resources, val showBottomDialog: (Tips) -> Unit) :
     RecyclerView.Adapter<NewsAdapter.ViewHolder>() {
 
-    private val listNews: List<News> = listOf(
-        News(
-            "Title1",
-            "Short Descriptiion 1",
-            "Long Description is here boyyiiii",
-            null
-        ),
-        News(
-            "Meningkatkan kualitas tulang",
-            "Tulang adalah penting pokoknya",
-            "Tulans Hanya bla bla bla karena bla bla bla",
-            null
-        )
-    )
+    private val n: DataNews = DataNews()
+    private val listNews: List<Tips> = n.listNews
 
     inner class ViewHolder(private val binding: ComponentCardNewsBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
-        fun bind(item: News) {
-            binding.tvNewsTitle.text = item.title
-            binding.tvNewsShort.text = item.short
+        fun bind(item: Tips) {
+            binding.tvNewsTitle.text = res.getString(item.title)
+            binding.tvNewsShort.text = n.getShort(res, item.paragraph)
 
             binding.rootNews.setOnClickListener {
                 showBottomDialog(item)
