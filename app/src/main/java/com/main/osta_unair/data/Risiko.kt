@@ -10,7 +10,7 @@ class Risiko {
         R.string.rendah_long,
         R.color.result_green,
         R.string.rendah_expl,
-        R.string.rendah_short,
+        R.string.rendah_saran,
         "SELAMAT !"
     )
 
@@ -20,7 +20,7 @@ class Risiko {
         R.string.sedang_long,
         R.color.result_yellow,
         R.string.sedang_expl,
-        R.string.sedang_short,
+        R.string.sedang_saran,
         "HATI-HATI !"
     )
 
@@ -30,7 +30,7 @@ class Risiko {
         R.string.tinggi_long,
         R.color.result_red,
         R.string.tinggi_expl,
-        R.string.tinggi_short,
+        R.string.tinggi_saran,
         "BERBAHAYA !"
     )
 
