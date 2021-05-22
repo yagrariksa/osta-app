@@ -51,6 +51,7 @@ class CalcuBottomSheetDialog(val tanggal: String, val berat: String, val tinggi:
 
         newbinding.root.setBackgroundColor(resources.getColor(level.color))
 
+        newbinding.dialogTitleResult.text = level.tagline
         newbinding.dialogSubtitleResult.text = level.title
         newbinding.tvResultExpl.text = resources.getString(level.expl)
         newbinding.tvResultSaran.text = resources.getString(level.saran)
