@@ -5,7 +5,7 @@
     <string name="title_notifications">Notifications</string>DarkActionBar
 
     <string name="menu_item_calcu">Calculator</string>
-    <string name="menu_item_level">Level</string>
+    <string name="menu_item_level">Tingkatan</string>
     <string name="menu_item_news">Tips</string>
     <string name="fragment_title_calcu">Calculator Osteoporosis</string>
     <!-- TODO: Remove or change this placeholder text -->
@@ -21,6 +21,7 @@
     </string>
 
     <string-array name="month">
+        <item>Bulan</item>
         <item>Jan</item>
         <item>Feb</item>
         <item>Mar</item>
@@ -36,61 +37,55 @@
     </string-array>
 
     <string name="rendah_long">
-        Anda berada pada risiko rendah, artinya tulang Anda dalam keadaaan padat dan berkualitas.
-        Risiko mengalami osteoporosis hanya 3%. Terus lakukakn gaya hidup sehat,
-        seperti selalu mengonsumsi makanan kaya kalsium dan lakukan olahraga untuk melatih kekuatan otot dan tulang secara teratur.
+        Jika hasil perhitungan Anda termasuk kategori risiko rendah, maka anda berisiko mengalami osteoporosis sebesar 3%.
+        Terus lakukan gaya hidup sehat, seperti selalu mengonsumsi makanan kaya kalsium dan lakukan olahraga untuk melatih kekuatan otot dan tulang secara teratur,
+        mengurangi rokok, dan menghindari minuman beralkohol
         Jangan lupa, hitung risiko osteoporosis tulangmu secara berkala ya!
     </string>
     <string name="rendah_short">
-        Anda berada pada risiko rendah, artinya tulang Anda dalam keadaaan padat dan berkualitas
+        anda berisiko mengalami osteoporosis sebesar 3%.
     </string>
     <string name="rendah_expl">
-        Anda berada pada risiko rendah, artinya tulang Anda dalam keadaaan padat dan berkualitas.
-        Risiko mengalami osteoporosis hanya 3%.
+        Anda berisiko rendah mengalami osteoporosis, artinya tulang anda dalam kondisi padat dan berkualitas
     </string>
     <string name="rendah_saran">
-        Terus lakukakn gaya hidup sehat,
-        seperti selalu mengonsumsi makanan kaya kalsium dan lakukan olahraga untuk melatih kekuatan otot dan tulang secara teratur.
-        Jangan lupa, hitung risiko osteoporosis tulangmu secara berkala ya!
+        Pertahankan gaya hidup sehat, seperti konsumsi makanan kaya kalsium, olahraga teratur, mengurangi rokok, dan menghindari minuman beralkohol
     </string>
 
     <string name="sedang_long">
-        Anda berada pada risiko sedang, artinya Anda masih dalam kategori hati-hati.
-        Risiko mengalami osteoporosis sebesar 15%.
-        Selalu konsumsi makanan kaya kalsium dan lakukan olahraga untuk melatih kekuatan otot dan tulang secara teratur.
-        Jangan lupa, hitung risiko osteoporosis tulangmu secara berkala ya!
+        Jika hasil perhitungan Anda termasuk kategori risiko sedang, maka anda berisiko mengalami osteoporosis sebesar 15%.
+        Hasil riset menunjukkan bahwa 2 dari 10 orang yang berada pada kategori risiko sdang akan mengalami osteoporosis dalam waktu dekat.
+        Lakukan konsultasi ke dokter untuk melakukan BMD Test guna memastikan kondisi kepadatan dan kualitas tulang Anda.
+        Selain itu, tetap konsumsi makanan kaya kalsium dan lakukan olahraga untuk melatih kekuatan otot dan tulang secara teratur.
+        Hindari merokok dan minuman beralkohol. Jangan lupa, hitung risiko osteoporosis tulangmu secara berkala ya
     </string>
     <string name="sedang_short">
-        Anda berada pada risiko sedang, artinya Anda masih dalam kategori hati-hati.
+        Hasil riset menunjukkan bahwa 2 dari 10 orang yang berada pada kategori risiko sdang akan mengalami osteoporosis dalam waktu dekat.
     </string>
     <string name="sedang_expl">
-        Anda berada pada risiko sedang, artinya Anda masih dalam kategori hati-hati.
-        Risiko mengalami osteoporosis sebesar 15%.
+        Hati-hati! Anda berisiko "sedang" mengalami osteoporosis, yaitu sebesar 15%
     </string>
     <string name="sedang_saran">
-        Selalu konsumsi makanan kaya kalsium dan lakukan olahraga untuk melatih kekuatan otot dan tulang secara teratur.
-        Jangan lupa, hitung risiko osteoporosis tulangmu secara berkala ya!
+        Konsultasi  ke dokter untuk melakukan BMD Test guna memastikan kondisi kepadatan dan kualitsa tulang Anda
     </string>
 
     <string name="tinggi_long">
-        Anda berisiko tinggi mengalami osteoporosis.
-        Risiko mengalami osteoporosis sebesar 61%.
+        Jika hasil perhitungan Anda termasuk kategori risio tinggi, maka Anda berisiko mengalami osteoporsis sebesar 61%.
+        Hasil riset menunjukkan bahwa 6 dari 10 orang yang berada pada kategori risiko tinggi akan mengalami osteoporosis dalam waktu dekat.
         Segera konsultasi ke dokter untuk melakukan BMD Test dan konsumsi suplemen tambahan untuk membantu memperbaiki struktur tulang.
-        Konsumsi makanan kaya kalsium dan lakukan olahraga untuk melatih kekuatan otot dan tulang secara teratur.
-        Jangan lupa, hitung risiko osteoporosis tulangmu secara berkala ya!
+        Selain itu, tetap konsumsi makanan kaya kalsium, serta kurangi aktivitas yang membutuhkan kepkuatan tulang dan otot secara berlebihan.
+        Konsultasikan pula jenis olahraga yang aman untuk kondisi tulang Anda kepada dokter ya.
+        Jangan lupa, hitung risio osteoporosis secara berkala!
     </string>
     <string name="tinggi_short">
-        Anda berisiko tinggi mengalami osteoporosis.
-        Risiko mengalami osteoporosis sebesar 61%.
+        HAsil riset menunjukkan bahwa 6 dari 10 orang yang berada pada kategori risiko tinggi akan mengalami osteoporosis dalam waktu dekat.
     </string>
     <string name="tinggi_expl">
-        Anda berisiko tinggi mengalami osteoporosis.
+        Awas! Anda berisiko tinggi mengalami osteoporosis.
         Risiko mengalami osteoporosis sebesar 61%.
     </string>
     <string name="tinggi_saran">
-        egera konsultasi ke dokter untuk melakukan BMD Test dan konsumsi suplemen tambahan untuk membantu memperbaiki struktur tulang.
-        Konsumsi makanan kaya kalsium dan lakukan olahraga untuk melatih kekuatan otot dan tulang secara teratur.
-        Jangan lupa, hitung risiko osteoporosis tulangmu secara berkala ya!
+        Segera konsultasi ke dokter untuk melakukan BMD Test dan konsumsi suplemen tambahan untuk membantu memperbaiki struktur tulang.
     </string>
 
     <string name="tips_1_title">

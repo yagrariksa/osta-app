@@ -58,6 +58,6 @@
 
     <style name="button" >
         <item name="android:fontFamily">@font/sf_pro_text_bold</item>
-        <item name="android:textSize">15sp</item>
+        <item name="android:textSize">17sp</item>
     </style>
 </resources>

@@ -16,15 +16,44 @@ import java.util.*
 
 class CalcuFragment(
     private val ctx: Context,
-    val showBottomDialog: (String, String, String, String, Level) -> Unit
+    val showBottomDialog: (String, String, String, String, String, Level) -> Unit
 ) : Fragment() {
 
     private lateinit var binding: FragmentCalcuBinding
     private lateinit var bulan: String
     private lateinit var kelamin: String
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        bulan = ""
+        /*
+        adapter = object : ArrayAdapter<String>(ctx, R.array.month, R.layout.component_spinner) {
+            override fun isEnabled(position: Int): Boolean {
+                if (position == 0) {
+                    return false
+                } else {
+                    return true
+                }
+            }
+
+            override fun getDropDownView(
+                position: Int,
+                convertView: View?,
+                parent: ViewGroup
+            ): View {
+                val view = super.getDropDownView(position, convertView, parent)
+                val tv: TextView = view as TextView
+                if (position == 0) {
+                    tv.setTextColor(resources.getColor(R.color.text_hint))
+                } else {
+                    tv.setTextColor(resources.getColor(R.color.text_grey))
+                }
+                return view
+            }
+        }
+
+         */
     }
 
     override fun onCreateView(
@@ -41,24 +70,22 @@ class CalcuFragment(
         binding.btnCalcu.setOnClickListener {
             if (validateData()) {
 //                val usia = binding.inputUsia.text.toString()
-                val usia =
-                    "${binding.inputTanggal.text.toString()} ${bulan} ${binding.inputTahun.text.toString()}, umur : " + hitungUmur() + " tahun"
+                val tanggal =
+                    "${binding.inputTanggal.text.toString()} ${bulan} ${binding.inputTahun.text.toString()}"
                 val berat = binding.inputBerat.text.toString()
                 val tinggi = binding.inputTinggi.text.toString()
 
                 val risiko = Risiko()
                 val level = risiko.hitung(berat.toInt(), hitungUmur())
 
-                Log.d("CALCULATE", "data1: ${usia}, data2: ${berat}, data3: ${tinggi}")
-                showBottomDialog(usia, berat, tinggi, kelamin, level)
+                Log.d("CALCULATE", "data1: ${tanggal}, data2: ${berat}, data3: ${tinggi}")
+                showBottomDialog(tanggal, berat, tinggi, kelamin, "" + hitungUmur() + " Tahun", level)
             }
 
         }
 
         ArrayAdapter.createFromResource(
-            ctx,
-            R.array.month,
-            R.layout.component_spinner
+            ctx, R.array.month, R.layout.component_spinner
         ).also { adapter ->
             adapter.setDropDownViewResource(R.layout.component_spinner)
             binding.inputBulan.adapter = adapter
@@ -72,7 +99,11 @@ class CalcuFragment(
                 id: Long
             ) {
                 Log.d("SPINNER", "BULAN : ${parent?.getItemAtPosition(position)}")
-                bulan = parent?.getItemAtPosition(position).toString()
+                if (position == 0) {
+                    bulan = ""
+                } else {
+                    bulan = parent?.getItemAtPosition(position).toString()
+                }
                 binding.spinnerDisplay.text = binding.inputBulan.selectedItem.toString()
             }
 
@@ -101,18 +132,18 @@ class CalcuFragment(
         val tanggal = binding.inputTanggal.text.toString().toInt()
         val tahun = binding.inputTahun.text.toString().toInt()
 
-            val umur_tahun = y - tahun
+        val umur_tahun = y - tahun
 
-        val umur_bulan = m - binding.inputBulan.selectedItemPosition
+        val umur_bulan = m - (binding.inputBulan.selectedItemPosition - 1)
         if (umur_bulan < 0) {
-            returnal = umur_tahun-1
-        }else if (umur_bulan == 0){
-            if (d-tanggal > 0) {
-                returnal = umur_tahun-1
-            }else{
+            returnal = umur_tahun - 1
+        } else if (umur_bulan == 0) {
+            if (d - tanggal > 0) {
+                returnal = umur_tahun - 1
+            } else {
                 returnal = umur_tahun
             }
-        }else {
+        } else {
             returnal = umur_tahun
         }
 
@@ -156,6 +187,11 @@ class CalcuFragment(
             }
         }
 
+        if (binding.inputBulan.selectedItemPosition == 0) {
+            binding.tvErrorUsia.visibility = View.VISIBLE
+            binding.tvErrorUsia.text = "Pilih Bulan"
+            returnal = false
+        }
 
         if (binding.inputBerat.text.toString() == "") {
             binding.tvErrorBerat.visibility = View.VISIBLE

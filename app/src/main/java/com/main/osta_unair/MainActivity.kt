@@ -23,7 +23,16 @@ class MainActivity : AppCompatActivity() {
 
 
     private val pages = listOf(
-        CalcuFragment(this) { data1, data2, data3, data4, data5 -> calcuBottomDialog(data1, data2, data3, data4, data5) },
+        CalcuFragment(this) { data1, data2, data3, data4, data5, data6 ->
+            calcuBottomDialog(
+                data1,
+                data2,
+                data3,
+                data4,
+                data5,
+                data6
+            )
+        },
         LevelFragment(this) { item -> levelBottomDialog(item) },
         NewsFragment(this) { news -> newsBottomDialog(news) }
     )
@@ -94,13 +103,21 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    private fun readMore(){
+    private fun readMore() {
         binding.btmNav.selectedItemId = R.id.menu_item_level
         viewPager.currentItem = 1
     }
 
-    private fun calcuBottomDialog(usia: String, berat: String, tinggi: String, kelamin: String, level: Level) {
-        val dd = CalcuBottomSheetDialog(usia, berat, tinggi, kelamin, level) {  -> readMore()}
+    private fun calcuBottomDialog(
+        tanggal: String,
+        berat: String,
+        tinggi: String,
+        kelamin: String,
+        usia: String,
+        level: Level
+    ) {
+        val dd =
+            CalcuBottomSheetDialog(tanggal, berat, tinggi, kelamin, usia, level) { -> readMore() }
         dd.show(supportFragmentManager, "CALCU_BOTTOM_DIALOG")
     }
 

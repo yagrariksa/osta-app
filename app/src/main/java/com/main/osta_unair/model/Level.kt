@@ -7,4 +7,5 @@ data class Level(
     val color: Int,
     val expl: Int,
     val saran: Int,
+    val tagline: String?,
 )

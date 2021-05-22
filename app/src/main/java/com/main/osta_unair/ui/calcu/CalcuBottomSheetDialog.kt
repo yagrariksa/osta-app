@@ -12,7 +12,7 @@ import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.main.osta_unair.databinding.DialogResultCalcuBinding
 import com.main.osta_unair.model.Level
 
-class CalcuBottomSheetDialog(val usia: String, val berat: String, val tinggi: String, val kelamin: String, val level: Level, private val readmore: () -> Unit) :
+class CalcuBottomSheetDialog(val tanggal: String, val berat: String, val tinggi: String, val kelamin: String, val usia: String, val level: Level, private val readmore: () -> Unit) :
     BottomSheetDialogFragment() {
 
     private lateinit var newbinding: DialogResultCalcuBinding
@@ -56,6 +56,7 @@ class CalcuBottomSheetDialog(val usia: String, val berat: String, val tinggi: St
         newbinding.tvResultSaran.text = resources.getString(level.saran)
 
         newbinding.tvResultUsia.text = usia
+        newbinding.tvResultTanggal.text = tanggal
         newbinding.tvResultBerat.text = berat + " kg"
         newbinding.tvResultTinggi.text = tinggi + " cm"
         newbinding.tvResultKelamin.text = kelamin

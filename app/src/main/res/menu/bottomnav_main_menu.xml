@@ -4,15 +4,15 @@
     <item
         android:id="@+id/menu_item_calcu"
         android:title="@string/menu_item_calcu"
-        android:icon="@drawable/ic_menu_calcu"/>
+        android:icon="@drawable/ic_navbot_calcu"/>
 
     <item
         android:id="@+id/menu_item_level"
         android:title="@string/menu_item_level"
-        android:icon="@drawable/ic_menu_calcu"/>
+        android:icon="@drawable/ic_navbot_level"/>
 
     <item
         android:id="@+id/menu_item_news"
         android:title="@string/menu_item_news"
-        android:icon="@drawable/ic_menu_calcu"/>
+        android:icon="@drawable/ic_navbot_tips"/>
 </menu>

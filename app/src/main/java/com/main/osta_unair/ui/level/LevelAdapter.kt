@@ -2,6 +2,7 @@ package com.main.osta_unair.ui.level
 
 import android.content.Context
 import android.content.res.Resources
+import android.graphics.BitmapFactory
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.core.view.setPadding
@@ -24,7 +25,9 @@ class LevelAdapter(private val context: Context, val resources: Resources, val s
             binding.cardTitle.setBackgroundColor(resources.getColor(item.color))
             binding.cardTitle.setPadding(10,3,10,3)
             binding.cardTitle.text = item.title
-            binding.cardShort.text = resources.getString(item.short)
+//            binding.cardShort.text = resources.getString(item.short)
+            binding.pict1.setImageResource(item.short)
+            binding.pict2.setImageResource(item.short)
             binding.rootLinearLayout.setOnClickListener {
                 showBottomDialog(item)
             }

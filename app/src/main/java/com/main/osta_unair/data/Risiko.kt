@@ -5,30 +5,33 @@ import com.main.osta_unair.model.Level
 
 class Risiko {
     val rendah: Level = Level(
-        "Low Risk",
-        R.string.rendah_short,
+        "RISIKO RENDAH",
+        R.drawable.ic_man_10,
         R.string.rendah_long,
         R.color.result_green,
         R.string.rendah_expl,
         R.string.rendah_short,
+        "SELAMAT !"
     )
 
     val sedang: Level = Level(
-        "Medium Risk",
-        R.string.sedang_short,
+        "RISIKO SEDANG",
+        R.drawable.ic_man_40,
         R.string.sedang_long,
         R.color.result_yellow,
         R.string.sedang_expl,
         R.string.sedang_short,
+        "HATI-HATI !"
     )
 
     val tinggi: Level = Level(
-        "High Risk",
-        R.string.tinggi_short,
+        "RISIKO TINGGI",
+        R.drawable.ic_man_70,
         R.string.tinggi_long,
         R.color.result_red,
         R.string.tinggi_expl,
         R.string.tinggi_short,
+        "BERBAHAYA !"
     )
 
     val listLevel: List<Level> = listOf(
