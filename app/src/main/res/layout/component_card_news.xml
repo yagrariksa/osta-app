@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root_news"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="24dp"
+    android:background="@drawable/shape_card_level"
+    android:backgroundTint="@color/light_grey"
+    android:padding="24dp">
+
+    <TextView
+        android:id="@+id/tv_news_title"
+        style="@style/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TITLE"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_news_short"
+        style="@style/paragraph"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/short_lorem"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/tv_news_title"
+        app:layout_constraintTop_toBottomOf="@id/tv_news_title" />
+
+    <TextView
+        style="@style/more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Baca Lebih Lanjut"
+        android:textColor="@color/blue_700"
+        app:layout_constraintStart_toStartOf="@id/tv_news_short"
+        app:layout_constraintTop_toBottomOf="@id/tv_news_short" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

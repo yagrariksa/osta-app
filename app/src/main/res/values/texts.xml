@@ -1,0 +1,63 @@
+<resources>
+
+    <style name="regular">
+        <item name="android:fontFamily">@font/sf_pro_text_regular</item>
+    </style>
+
+    <style name="regular.italic">
+        <item name="android:fontFamily">@font/sf_pro_text_regularitalic</item>
+    </style>
+
+    <style name="semibold">
+        <item name="android:fontFamily">@font/sf_pro_text_semibold</item>
+    </style>
+
+    <style name="bold">
+        <item name="android:fontFamily">@font/sf_pro_display_bold</item>
+    </style>
+
+    <style name="bold.italic">
+        <item name="android:fontFamily">@font/sf_pro_display_bolditalic</item>
+    </style>
+
+    <style name="paragraph" parent="regular">
+        <item name="android:textColor">@color/text_grey</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="title" parent="semibold">
+        <item name="android:textColor">@color/text_black</item>
+        <item name="android:textSize">17sp</item>
+    </style>
+
+    <style name="title.big" parent="bold">
+        <item name="android:textColor">@color/text_black</item>
+        <item name="android:textSize">34sp</item>
+    </style>
+
+    <style name="subtitle" parent="semibold">
+        <item name="android:textColor">@color/text_black</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="label" parent="regular">
+        <item name="android:textColor">@color/text_black</item>
+        <item name="android:textSize">17sp</item>
+    </style>
+
+    <style name="error" parent="paragraph">
+        <item name="android:textColor">@color/text_red</item>
+        <item name="android:textStyle">italic</item>
+        <item name="android:textSize">13sp</item>
+    </style>
+
+    <style name="more" parent="paragraph">
+        <item name="android:textColor">@color/blue_700</item>
+        <item name="android:textSize">13sp</item>
+    </style>
+
+    <style name="button" >
+        <item name="android:fontFamily">@font/sf_pro_text_bold</item>
+        <item name="android:textSize">17sp</item>
+    </style>
+</resources>
