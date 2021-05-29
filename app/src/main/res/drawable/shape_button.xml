@@ -4,4 +4,9 @@
     <item android:state_focused="true" android:state_pressed="true" android:drawable="@drawable/shape_button_clicked" />
     <item android:state_focused="false" android:state_pressed="true" android:drawable="@drawable/shape_button_clicked" />
     <item android:drawable="@drawable/shape_button_normal" />
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/brown_700"/>
+        </shape>
+    </item>
 </selector>

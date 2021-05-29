@@ -52,7 +52,7 @@
     </style>
 
     <style name="more" parent="paragraph">
-        <item name="android:textColor">@color/blue_700</item>
+        <item name="android:textColor">@color/brown_700</item>
         <item name="android:textSize">13sp</item>
     </style>
 

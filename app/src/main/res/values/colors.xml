@@ -24,4 +24,11 @@
     <color name="result_green">#17c3b2</color>
     <color name="result_yellow">#ffcb77</color>
     <color name="result_red">#fe6d73</color>
+
+    <color name="brown_200">#FEFAE0</color>
+    <color name="brown_500">#FAEDCD</color>
+    <color name="brown_700">#C58544</color>
+
+    <color name="green_200">#E9EDC9</color>
+    <color name="green_500">#CCD5AE</color>
 </resources>

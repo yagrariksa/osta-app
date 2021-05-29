@@ -20,8 +20,8 @@
         android:layout_height="wrap_content"
         android:text="Osteoporosis"
         style="@style/title.big"/>
-    <androidx.recyclerview.widget.RecyclerView
 
+    <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="fill_parent"
         android:orientation="vertical"

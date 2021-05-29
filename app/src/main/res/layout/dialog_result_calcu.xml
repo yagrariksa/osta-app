@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/blue_200"
+    android:background="@color/brown_200"
     android:orientation="vertical">
 
     <ImageButton
@@ -250,10 +250,11 @@
             <Button
                 android:id="@+id/btn_read_more"
                 style="@style/button"
+                android:textColor="@color/text_white"
+                android:backgroundTint="@color/brown_700"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginTop="32dp"
-                android:background="@drawable/shape_button"
                 android:text="pelajari lebih lanjut" />
         </LinearLayout>
 
