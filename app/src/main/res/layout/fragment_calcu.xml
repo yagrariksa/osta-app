@@ -61,7 +61,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
                 android:background="@drawable/shape_edittext"
-                android:hint="Tgl"
+                android:hint="Tanggal"
                 android:inputType="number"
                 android:textCursorDrawable="@drawable/color_cursor"
                 app:layout_constraintStart_toStartOf="@+id/tv_label_usia"
@@ -136,7 +136,7 @@
                 android:layout_marginHorizontal="32dp"
                 android:layout_marginTop="4dp"
                 android:background="@drawable/shape_edittext"
-                android:hint="isi Berat Badan anda disini"
+                android:hint="isi Berat Badan Anda"
                 android:inputType="number"
                 android:textCursorDrawable="@drawable/color_cursor"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -172,7 +172,7 @@
                 android:layout_marginHorizontal="32dp"
                 android:layout_marginTop="4dp"
                 android:background="@drawable/shape_edittext"
-                android:hint="isi Tinggi Badan anda disini"
+                android:hint="isi Tinggi Badan Anda"
                 android:inputType="number"
                 android:textCursorDrawable="@drawable/color_cursor"
                 app:layout_constraintTop_toBottomOf="@id/tv_label_tinggi" />
@@ -188,22 +188,6 @@
                 app:layout_constraintStart_toStartOf="@id/input_tinggi"
                 app:layout_constraintTop_toBottomOf="@id/input_tinggi" />
 
-            <TextView
-                android:id="@+id/btn_calcu"
-                style="@style/button"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginHorizontal="32dp"
-                android:layout_marginTop="42dp"
-                android:background="@drawable/shape_button"
-                android:clickable="true"
-                android:focusable="true"
-                android:gravity="center"
-                android:text="Hitung"
-                android:textColor="@color/text_white"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/rg_kelamin" />
 
             <TextView
                 style="@style/paragraph"
@@ -269,6 +253,24 @@
                     android:drawableEnd="@drawable/ic_female"
                     android:drawableTint="#DC11D4" />
             </RadioGroup>
+
+            <TextView
+                android:id="@+id/btn_calcu"
+                style="@style/button"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginHorizontal="32dp"
+                android:layout_marginTop="42dp"
+                android:background="@drawable/shape_button"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:text="Hitung"
+                android:textColor="@color/text_white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rg_kelamin" />
+
 
             <TextView
                 android:id="@+id/tv_error_kelamin"
