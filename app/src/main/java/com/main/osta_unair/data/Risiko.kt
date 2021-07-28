@@ -3,7 +3,7 @@ package com.main.osta_unair.data
 import com.main.osta_unair.R
 import com.main.osta_unair.model.Level
 
-class Risiko {
+class  Risiko {
     val rendah: Level = Level(
         "RISIKO RENDAH",
         R.drawable.ic_man_10,
