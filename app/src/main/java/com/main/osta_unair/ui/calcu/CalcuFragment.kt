@@ -27,6 +27,7 @@ class CalcuFragment(
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         bulan = ""
+
         /*
         adapter = object : ArrayAdapter<String>(ctx, R.array.month, R.layout.component_spinner) {
             override fun isEnabled(position: Int): Boolean {
@@ -79,7 +80,14 @@ class CalcuFragment(
                 val level = risiko.hitung(berat.toInt(), hitungUmur())
 
                 Log.d("CALCULATE", "data1: ${tanggal}, data2: ${berat}, data3: ${tinggi}")
-                showBottomDialog(tanggal, berat, tinggi, kelamin, "" + hitungUmur() + " Tahun", level)
+                showBottomDialog(
+                    tanggal,
+                    berat,
+                    tinggi,
+                    kelamin,
+                    "" + hitungUmur() + " Tahun",
+                    level
+                )
             }
 
         }

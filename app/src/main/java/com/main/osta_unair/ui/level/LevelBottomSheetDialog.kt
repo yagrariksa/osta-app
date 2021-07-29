@@ -20,7 +20,6 @@ class LevelBottomSheetDialog(val item: Level): BottomSheetDialogFragment() {
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
         ddialog = super.onCreateDialog(savedInstanceState)
 
-        /*
         ddialog.setOnShowListener {
 
             val bottomSheetDialog = it as BottomSheetDialog
@@ -32,8 +31,6 @@ class LevelBottomSheetDialog(val item: Level): BottomSheetDialogFragment() {
                 behaviour.state = BottomSheetBehavior.STATE_EXPANDED
             }
         }
-
-         */
 
         return ddialog
     }

@@ -1,6 +1,7 @@
 package com.main.osta_unair
 
 import android.os.Bundle
+import android.os.PersistableBundle
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager.widget.ViewPager
@@ -12,15 +13,13 @@ import com.main.osta_unair.model.Level
 import com.main.osta_unair.model.Tips
 import com.main.osta_unair.ui.level.LevelBottomSheetDialog
 import com.main.osta_unair.ui.level.LevelFragment
-import com.main.osta_unair.ui.news.News
 import com.main.osta_unair.ui.news.NewsBottomSheetDialog
 import com.main.osta_unair.ui.news.NewsFragment
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityMainBinding
     private lateinit var viewPager: ViewPager
-
+    private lateinit var btmNav: BottomNavigationView
 
     private val pages = listOf(
         CalcuFragment(this) { data1, data2, data3, data4, data5, data6 ->
@@ -40,15 +39,15 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         /** Error while rotting*/
-        binding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+        setContentView(R.layout.activity_main)
 
         /*
         loadFragment(pages[0])
          */
 
         val adapter = MainPageAdapter(supportFragmentManager, pages)
-        viewPager = binding.vpMain
+        btmNav = findViewById(R.id.btm_nav);
+        viewPager = findViewById(R.id.vp_main)
         viewPager.adapter = adapter
 
         viewPager.addOnPageChangeListener(object : ViewPager.OnPageChangeListener {
@@ -63,13 +62,13 @@ class MainActivity : AppCompatActivity() {
             override fun onPageSelected(position: Int) {
                 when (position) {
                     0 -> {
-                        binding.btmNav.selectedItemId = R.id.menu_item_calcu
+                        btmNav.selectedItemId = R.id.menu_item_calcu
                     }
                     1 -> {
-                        binding.btmNav.selectedItemId = R.id.menu_item_level
+                        btmNav.selectedItemId = R.id.menu_item_level
                     }
                     2 -> {
-                        binding.btmNav.selectedItemId = R.id.menu_item_news
+                        btmNav.selectedItemId = R.id.menu_item_news
                     }
                 }
             }
@@ -80,7 +79,7 @@ class MainActivity : AppCompatActivity() {
 
         })
 
-        binding.btmNav.setOnNavigationItemSelectedListener(object :
+        btmNav.setOnNavigationItemSelectedListener(object :
             BottomNavigationView.OnNavigationItemSelectedListener {
             override fun onNavigationItemSelected(item: MenuItem): Boolean {
                 when (item.itemId) {
@@ -105,7 +104,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun readMore() {
-        binding.btmNav.selectedItemId = R.id.menu_item_level
+        btmNav.selectedItemId = R.id.menu_item_level
         viewPager.currentItem = 1
     }
 
